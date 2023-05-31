@@ -10,7 +10,7 @@ class AlfaBetaAgent:
         self.depth = depth
         self.my_token = token
 
-    def decide(self, game=connect4.Connect4()):  # returns int - # of column
+    def decide(self, game=connect4.Connect4()):
         if game.who_moves != self.my_token:
             raise AgentException('not my round')
 
@@ -22,9 +22,9 @@ class AlfaBetaAgent:
 
     def minmax(self, game, depth, alfa, beta, maximizing_player):
         if game.check_game_over():
-            if game.wins is None:             # TIE
+            if game.wins is None:               # TIE
                 return None, 0
-            if game.wins == self.my_token:    # AGENT WINS
+            if game.wins == self.my_token:      # AGENT WINS
                 game.wins = None
                 return None, 1000000
             else:                               # OPPONENT WINS

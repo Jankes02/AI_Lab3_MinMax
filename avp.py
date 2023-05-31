@@ -5,6 +5,7 @@ from minmaxagent import MinMaxAgent
 from alfabetaagent import AlfaBetaAgent
 
 connect4 = Connect4(width=7, height=6)
+# CHANGE AGENT TYPE BELOW (you can change the depth too)
 # agent = MinMaxAgent('x', 6)
 # agent = RandomAgent('x')
 agent = AlfaBetaAgent('x', 6)

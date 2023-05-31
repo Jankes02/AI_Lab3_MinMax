@@ -1,5 +1,5 @@
 from exceptions import GameplayException
-import numpy
+
 
 class Connect4:
     def __init__(self, width=7, height=6):
